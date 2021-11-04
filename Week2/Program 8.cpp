@@ -15,14 +15,14 @@ struct Circle
 
 	float radius = 15;
 
-	int Area()
+	float Area()
 	{
 		return 0.5 * tau * radius * radius;
 	}
 };
 
 
-void Program6()
+void main()
 {
 	Circle circle(25);
 	

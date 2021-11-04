@@ -44,6 +44,11 @@ void Program4()
 {
     Player player = Player();
 
+    cout << "My current health is : " << player.healthCurrent << endl;
+    cout << "And the ID of my weapon of choice is : " << (int)player.weapon.type << endl;
+
+    /*
     cout << "Player health: " << player.healthCurrent << endl;
     cout << "Player weapon: " << (int)player.weapon.type << endl;
+    */
 }
