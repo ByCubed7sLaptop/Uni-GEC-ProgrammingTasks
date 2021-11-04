@@ -15,7 +15,7 @@ inline string operator * (string str, unsigned int amount) {
 }
 
 
-int main()
+void Program12()
 {
 	/*
 	1.	Which asks the user for a number n between 1 and 10.  The program should then print out n lines.  Each should consist of a number of stars of the same number as the current line number. For example:
