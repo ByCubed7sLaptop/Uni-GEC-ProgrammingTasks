@@ -32,7 +32,7 @@ void outputResults(int numOfOdd, int oddTotal, int numOfEven, int evenTotal)
 	cout << "Even Total = " << evenTotal << endl;
 }
 
-int main()
+void Program19()
 {
 	auto IsEven = [](int number) { return number % 2 == 0; };
 
@@ -42,7 +42,7 @@ int main()
 	int oddTotal = 0;
 
 	int input;
-	for (int i = 0; i < 10; i++) 
+	for (int i = 0; i < 10; i++)
 	{
 		cout << "Input a number: ";
 		cin >> input;

@@ -2,18 +2,20 @@
 
 using namespace std;
 
-void Program10()
+void Program11()
 {
-    // Write a program that displays a short menu such as :
-    
-    // >> Please choose your difficulty :
-    // >> 1. I’m too young to die!
-    // >> 2. Hey, not to rough!
-    // >> 3. Hurt me plenty.
-    // >> 4. Ultra - Violence.
-    // >> 5. Nightmare…
-    
-    //	The program should use a switch statement to display a short message appropriate to the option chosen(such as "Just FYI, they will shoot back").
+    /*
+        Write a program that displays a short menu such as :
+
+        >> Please choose your difficulty :
+        >> 1. I’m too young to die!
+        >> 2. Hey, not to rough!
+        >> 3. Hurt me plenty.
+        >> 4. Ultra - Violence.
+        >> 5. Nightmare…
+
+    	The program should use a switch statement to display a short message appropriate to the option chosen(such as "Just FYI, they will shoot back").
+    */
 
     // Display menu
     cout << "Please choose your difficulty" << endl;
@@ -22,13 +24,13 @@ void Program10()
     cout << "3. Hurt me plenty." << endl;
     cout << "4. Ultra - Violence." << endl;
     cout << "5. Nightmare..." << endl;
-    
+
     // Get option
     int option;
     cin >> option;
 
     switch (option) {
-    
+
     case 0:
         cout << "Tonight is going to be a terrible night." << endl;
         break;
@@ -57,5 +59,6 @@ void Program10()
         cout << "Or don't that's fine. ;-;" << endl;
         break;
     }
+
 
 }

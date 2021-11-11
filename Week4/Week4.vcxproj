@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ff0a940f-5982-4ae4-a04b-a14846d0da0d}</ProjectGuid>
-    <RootNamespace>Week3</RootNamespace>
+    <ProjectGuid>{49ee0fe3-b7b2-453a-a3c3-26d44c57f834}</ProjectGuid>
+    <RootNamespace>Week4</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,16 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Program 10 Share of Haribo.cpp" />
-    <ClCompile Include="Program 11 Doom Difficulty Menu.cpp" />
-    <ClCompile Include="Program 12 If This Then That.cpp" />
-    <ClCompile Include="Program 13 Discount.cpp" />
-    <ClCompile Include="Program 9 Share of Savings.cpp" />
-    <ClCompile Include="Program11.cpp" />
-    <ClCompile Include="Program12.cpp" />
-    <ClCompile Include="Task 1.cpp" />
-    <ClCompile Include="Task 2.cpp" />
-    <ClCompile Include="Task 3.cpp" />
+    <ClCompile Include="Program14 10 Numbers.cpp" />
+    <ClCompile Include="Program15 Starry Output.cpp" />
+    <ClCompile Include="Program 16 Early Exit.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

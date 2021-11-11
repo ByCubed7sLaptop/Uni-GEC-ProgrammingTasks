@@ -15,34 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Program11.cpp">
+    <ClCompile Include="Program 17 Local Variables n Copies.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Program12.cpp">
+    <ClCompile Include="Program 18 Smallest Number.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Program 13 Discount.cpp">
+    <ClCompile Include="Program 19 Odds and Evens.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Program 12 If This Then That.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program 11 Doom Difficulty Menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program 10 Share of Haribo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program 9 Share of Savings.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Task 2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Task 1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Task 3.cpp">
+    <ClCompile Include="Program 20 Simple Text Battle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
