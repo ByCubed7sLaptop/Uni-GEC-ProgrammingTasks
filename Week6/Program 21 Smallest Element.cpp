@@ -22,11 +22,11 @@ using namespace std;
 
 void Program21()
 {
-	int[10] numbers;
+	int numbers[10];
 	
 	for (int i = 0; i < 10; i++) {
 		cout << "Input a number: " << endl;
-		cin >> number[i];
+		cin >> numbers[i];
 	}
 
 	int smallestNumber = numbers[0];

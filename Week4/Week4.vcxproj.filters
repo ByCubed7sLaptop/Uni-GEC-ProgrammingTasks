@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Program14 10 Numbers.cpp">
+    <ClCompile Include="Program 14 10 Numbers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Program15 Starry Output.cpp">
+    <ClCompile Include="Program 15 Starry Output.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Program 16 Early Exit.cpp">

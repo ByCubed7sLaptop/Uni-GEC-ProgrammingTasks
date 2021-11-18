@@ -139,8 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Program14 10 Numbers.cpp" />
-    <ClCompile Include="Program15 Starry Output.cpp" />
+    <ClCompile Include="Program 14 10 Numbers.cpp" />
+    <ClCompile Include="Program 15 Starry Output.cpp" />
     <ClCompile Include="Program 16 Early Exit.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
