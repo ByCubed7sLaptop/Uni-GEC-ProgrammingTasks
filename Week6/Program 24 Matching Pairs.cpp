@@ -82,7 +82,7 @@ void DrawBoard(string board, bool shown[])
 {
 	system("cls");
 
-	for (int i; i < board.size(); i++) {
+	for (int i = 0; i < board.size(); i++) {
 		if (shown[i]) cout << "[" << board[i] << "]";
 		else cout << "[" << i + 1 << "]";
 	}
@@ -99,8 +99,4 @@ void Program24()
 	// obtain a time-based seed:
 	unsigned seed = chrono::system_clock::now().time_since_epoch().count();
 
-	while(true)
-	{
-		
-	}
 }

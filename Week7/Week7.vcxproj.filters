@@ -15,16 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Program 21 Smallest Element.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program 24 Matching Pairs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program 22 Ordered Output.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program 23 Inventory.cpp">
+    <ClCompile Include="Program 25 Initials.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

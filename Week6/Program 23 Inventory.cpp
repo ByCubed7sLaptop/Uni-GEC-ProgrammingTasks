@@ -62,5 +62,3 @@ void Program23()
 	PrintArray(inventory, inventoryMaxSize);
 	cout << endl;
 }
-
-int main() { Program23(); }
