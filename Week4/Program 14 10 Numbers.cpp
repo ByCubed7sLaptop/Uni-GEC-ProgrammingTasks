@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int Program14()
+void Program14()
 {
     /*
         Write a program

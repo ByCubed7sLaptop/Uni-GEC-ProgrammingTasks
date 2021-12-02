@@ -7,7 +7,7 @@ int smallestNumber(int a, int b)
 	return a < b ? a : b;
 }
 
-int Program18()
+void Program18()
 {
 	/*
 		Write a program, which asks the user to input 2 integers. 

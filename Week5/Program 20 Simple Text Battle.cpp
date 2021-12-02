@@ -155,7 +155,7 @@ bool PlayState()
 	return true;
 }
 
-int Program20()
+void Program20()
 {
 	int choice;
 	bool playing = true;

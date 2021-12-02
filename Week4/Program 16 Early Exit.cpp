@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int Program16()
+void Program16()
 {
 	/*
 		Write a C++ program, which creates an integer called playerLife. Set it to a starting value of 100 and outputs this to the console screen.

@@ -11,7 +11,7 @@ void AddTwo(int num)
 	cout << "Function: num = " << num << endl;
 }
 
-int Program17()
+void Program17()
 {
 	/*
 		This program will demonstrate how variables do not get affected outside of functions regardless of what you do to the local copies a function makes.
