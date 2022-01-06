@@ -15,16 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Program 34 Replacing Commas with space.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program 35 The Changing Pointer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program 36 Using References.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program 37 Designated Username.cpp">
+    <ClCompile Include="Program 38.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
