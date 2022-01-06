@@ -3,6 +3,7 @@
 #include <vector>
 #include <sstream>
 #include <iterator>
+#include <algorithm>
 
 using namespace std;
 
@@ -30,40 +31,40 @@ using namespace std;
 			You can read up on this function here: http://cplusplus.com/reference/istream/istream/getline/
 */
 
-template <typename Out>
-void split(const string& s, char delim, Out result) {
-	istringstream iss(s);
-	string item;
-	while (getline(iss, item, delim)) {
-		*result++ = item;
-	}
-}
+// Split a string into a vector of strings by a delimiter
+vector<string> split(const string& s, char delimiter)
+{
+	vector<string> strings;
 
-vector<string> split(const string& s, char delim) {
-	vector<string> elems;
-	split(s, delim, back_inserter(elems));
-	return elems;
+	stringstream test(s);
+	string slice;
+
+	while (getline(test, slice, delimiter))
+		strings.push_back(slice);
+	
+	return strings;
 }
 
 void Program25()
 {
 	string nameIn;
-	cout << "What's your full name? ";
-	cin >> nameIn;
+	vector<string> names;
+	
+	while(names.size() < 3){
+		cout << "Enter your first name initial, your middle name initial and your entire surname." << endl;
+		getline(cin, nameIn);
 
-	vector<string> names = split(nameIn, ' ');
-
-	cout << names[0];
-	cout << names[1];
-
-	string initials = "";
-	for (const auto& name : names) {
-		initials += name[0];
-		cout << name[0];
+		names = split(nameIn, *" ");
 	}
-	
 
-	
+	for (const auto& name : names) cout << name << endl;
+	cout << endl;
+
+
+	cout << "First initial: " << names[0][0] << endl;
+	cout << "Middle initial: " << names[1][0] << endl;
+	cout << endl;
+	cout << "Surname initial: " << names[2] << endl;	
 }
 
 //int main() { Program25(); }
