@@ -79,31 +79,39 @@ using namespace std;
 */
 
 
-/*
-		· A constructor which takes two pre-set integer parameters which are set to 0 in the braces (hunger and boredom)
-		· A destructor
-		· A virtual void method called Talk
-		· Two void methods
-			o Feed and Play, each taking a related a single pre-set int food or fun, both set to 4
-				§ (int food = 4)
+class Pet {
+	static const int hungerPtime = 1;
+	static const int boredomPtime = 1;
 
-		· Two private member variables
-			o m_hunger and m_bored (set to 0)
-
-		· Two protected methods
-			o An inline constant function that takes type int and returns m_hunger + m_bored called GetMood
-			o And a void PassingTime which takes a pre-set int called time that is equal to 1
-*/
-
-class pet {
 	int hunger = 0, boredom = 0;
-
-
+ 
 public:
-	
-	int inline GetMood() const { return hunger + boredom; } // inline is unneeded here
 
+	Pet(int hunger = 0, int boredom = 0) 
+	{
+		this->hunger = hunger;
+		this->boredom = boredom;
+	}
+
+	~Pet() {  }
 	
+	void feed(int food = 4) { hunger = min(hunger - food, 0); }
+	void play(int fun = 4) { boredom = min(boredom - fun, 0); }
+
+	virtual void talk() = 0;
+
+	// Gets
+	int getHunger() const { return hunger; }
+	int getBoredom() const { return boredom; }
+
+protected:
+	int inline getMood() const { return hunger + boredom; } // Note: inline and protected is unneeded here
+
+	void passTime(int time = 1) 
+	{
+		hunger += hungerPtime;
+		boredom += boredomPtime;
+	}
 };
 
 
