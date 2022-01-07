@@ -1,4 +1,5 @@
-#include <iostream>
+ï»¿#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -8,7 +9,7 @@ using namespace std;
 
 	They are, srand() and rand(), and these are used to generate random numbers. 
 	
-	Well, I say random, they aren’t truly random and creating a random device would be better 
+	Well, I say random, they arenâ€™t truly random and creating a random device would be better 
 	(contact Jay if you would like an example of how to create a random device) but for what we 
 	need rand and srand are work perfectly well.
 
@@ -24,32 +25,40 @@ using namespace std;
 	their chosen name is taken and provide them with a new one.
 
 	Steps:
-	•	Create a function prototype that takes a string reference.
-	•	In main, create a string and ask the user for name which is stored in said string.
-	•	Inform them the name is taken
-	•	Call your function
-	•	And output from main the string username value
+	â€¢	Create a function prototype that takes a string reference.
+	â€¢	In main, create a string and ask the user for name which is stored in said string.
+	â€¢	Inform them the name is taken
+	â€¢	Call your function
+	â€¢	And output from main the string username value
 		o	The function will require the following:
 		
 			srand(time(null));
 			int num = rand();
 
 		o	Using the reference, you must add the random numbers to the end of the name
-			-	Hint: ints don’t join strings without some help…
+			-	Hint: ints donâ€™t join strings without some helpâ€¦
 */
 
 
+string genUsername(string name) {
+	return name + to_string(rand());
+}
 
 void Program37()
 {
+	srand(time(NULL));
 
+	string input;
+	cout << "What's your username?" << endl;
+	cin >> input;
 
+	cout << "Username is taken." << endl;
 
-
-
+	input = genUsername(input);
+	cout << "New username = " << input;
 
 	// "new functions that will be used throughout your coding career"
-	// ...no?
+	// ... ( *â€¿*)?
 }
 
-//int main() { Program37(); };
+int main() { Program37(); };

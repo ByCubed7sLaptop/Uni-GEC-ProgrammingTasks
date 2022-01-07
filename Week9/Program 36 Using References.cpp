@@ -66,4 +66,4 @@ void Program36()
 	// *Insert incoherent screaming*
 }
 
-int main() { Program36(); };
+//int main() { Program36(); };

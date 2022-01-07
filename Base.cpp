@@ -6,9 +6,9 @@ using namespace std;
 
 */
 
-void Program38()
+void Program()
 {
 
 }
 
-//int main() { Program38(); };
+//int main() { Program(); };

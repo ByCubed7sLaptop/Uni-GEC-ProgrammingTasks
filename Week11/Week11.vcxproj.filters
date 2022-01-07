@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Program 38 Account Holding.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program 39 Top Ten Scores.cpp">
+    <ClCompile Include="Program 40 ePet Care.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
