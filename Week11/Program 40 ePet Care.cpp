@@ -1,4 +1,6 @@
 #include <iostream>
+#include "Pet.h"
+#include "Pets.h"
 
 using namespace std;
 
@@ -68,7 +70,7 @@ using namespace std;
 		· 0 – Quit
 		· 1 – Listen to your pet
 		· 2 – Feed your pet
-		· 3- Play with the pet
+		· 3 - Play with the pet
 
 	· These cases should call the appropriate method
 
@@ -78,47 +80,54 @@ using namespace std;
 	This program, with some changes to make it all automated, would be a simple state machine.
 */
 
+Pet* CreatePet() {
+	int input;
 
-class Pet {
-	static const int hungerPtime = 1;
-	static const int boredomPtime = 1;
+	while (true) {
+		cout << "Which pet would you like?" << endl
+			<< "[1] Cat" << endl
+			<< "[2] Dog" << endl
+			<< "[3] Birb" << endl;
+		cin >> input;
 
-	int hunger = 0, boredom = 0;
- 
-public:
-
-	Pet(int hunger = 0, int boredom = 0) 
-	{
-		this->hunger = hunger;
-		this->boredom = boredom;
+		switch (input) {
+		case 1: return new Cat();
+		case 2: return new Dog();
+		case 3: return new Birb();
+		default: cout << "That's not a choice!" << endl;
+		}
 	}
+}
 
-	~Pet() {  }
-	
-	void feed(int food = 4) { hunger = min(hunger - food, 0); }
-	void play(int fun = 4) { boredom = min(boredom - fun, 0); }
+void Mainloop(Pet* pet) 
+{
+	int input;
 
-	virtual void talk() = 0;
+	while (true) {
+		cout << "Which pet would you like?" << endl
+			<< "[0] Quit" << endl
+			<< "[1] Listen to your pet" << endl
+			<< "[2] Feed your pet" << endl
+			<< "[3] Play with your pet" << endl;
+		cin >> input;
 
-	// Gets
-	int getHunger() const { return hunger; }
-	int getBoredom() const { return boredom; }
-
-protected:
-	int inline getMood() const { return hunger + boredom; } // Note: inline and protected is unneeded here
-
-	void passTime(int time = 1) 
-	{
-		hunger += hungerPtime;
-		boredom += boredomPtime;
+		switch (input) {
+		case 0: return;
+		case 1: pet->talk(); break;
+		case 2: pet->feed(); break;
+		case 3: pet->play(); break;
+		default: cout << "That's not a choice!" << endl;
+		}
 	}
-};
-
-
+}
 
 void Program40()
 {
+	Pet* pet = CreatePet();
 
+	Mainloop(pet);
+
+	delete pet; // Thanos snap.gif
 }
 
 int main() { Program40(); };
