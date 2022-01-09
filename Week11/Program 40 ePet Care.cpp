@@ -104,7 +104,7 @@ void Mainloop(Pet* pet)
 	int input;
 
 	while (true) {
-		cout << "Which pet would you like?" << endl
+		cout << "What do you want to do?" << endl
 			<< "[0] Quit" << endl
 			<< "[1] Listen to your pet" << endl
 			<< "[2] Feed your pet" << endl
@@ -118,16 +118,19 @@ void Mainloop(Pet* pet)
 		case 3: pet->play(); break;
 		default: cout << "That's not a choice!" << endl;
 		}
+
+		cout << endl;
 	}
 }
 
 void Program40()
 {
 	Pet* pet = CreatePet();
+	cout << endl;
 
 	Mainloop(pet);
 
 	delete pet; // Thanos snap.gif
 }
 
-int main() { Program40(); };
+//int main() { Program40(); };

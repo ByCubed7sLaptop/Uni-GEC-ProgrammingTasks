@@ -38,12 +38,10 @@ using namespace std;
 
 void Program31()
 {
-	int count;
-	cout << "enter a number : " << endl;
-	cin >> count;
+	int count = 3;
 
 	//for (int i = 1; i > count; i++)
-	for (int i = 0; i < count; i++)
+	for (int i = 1; i < count + 1; i++)
 	{
 		cout << i;
 		//if (count = 2)

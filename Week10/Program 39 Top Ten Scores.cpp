@@ -55,6 +55,19 @@ using namespace std;
 		enterScore, displayScore, countScores, savedScores and loadScores.
 */
 
+const int maxSize = 10;
+
+int inputInt() {
+	string input;
+	while (true) 
+	{
+		cin >> input;
+		if (!input.empty() && input.find_first_not_of("0123456789") == string::npos)
+			return stoi(input);
+		cout << "That's not a number!" << endl;
+	}
+}
+
 vector<int> loadScores(string filename)
 {
 	vector<int> scores;
@@ -76,12 +89,36 @@ void saveScores(string filename, vector<int> newScores)
 	file.close();
 }
 
+void inputNewScore(vector<int>& currentScores)
+{
+	int score;
+	string name;
+
+	cout << "Enter the score" << endl;
+	score = inputInt();
+
+	cout << "Enter a name!" << endl;
+	cin >> name;
+
+	currentScores.push_back(score);
+
+	// Sort scores
+	std::sort(currentScores.begin(), currentScores.end(), std::greater<int>());
+
+	// Slice by max
+	currentScores = vector<int>(
+		currentScores.begin(),
+		// Size added can be less than max size
+		currentScores.size() > maxSize ? currentScores.begin() + maxSize : currentScores.end()
+		);
+
+}
+
 void Program39()
 {
 	string filename = "highscores.txt";
-	int maxSize = 10;
 
-	int input;
+	string input;
 
 	bool cont = true;
 	while (cont) 
@@ -89,36 +126,18 @@ void Program39()
 		cout << "What would you like to do?" << endl
 			<< "[1] Add a new score" << endl
 			<< "[2] List scores" << endl
-			<< "[3] Exit" << endl;
-		cin >> input;
+			<< "[3] Exit" << endl;		
+		int option = inputInt();
 
 		cout << endl;
 
 		vector<int> currentScores = loadScores(filename);
 
 		int i = 1;
-		switch (input) {
+		int newScore;
+		switch (option) {
 		case 1:
-			cout << "Enter the score: ";
-			int newScore;
-			cin >> newScore;
 
-			currentScores.push_back(newScore);
-
-			// Sort scores
-			std::sort(currentScores.begin(), currentScores.end(), std::greater<int>());
-
-			// Slice by max
-			currentScores = vector<int>(
-				currentScores.begin(),
-				// Size added can be less than max size
-				currentScores.size() > maxSize ? currentScores.begin() + maxSize : currentScores.end()
-				);
-
-			// Save
-			saveScores(filename, currentScores);
-
-			break;
 
 		case 2:
 			cout << " - Scores -" << endl;
@@ -140,4 +159,4 @@ void Program39()
 	}
 }
 
-// int main() { Program39(); };
+//int main() { Program39(); };

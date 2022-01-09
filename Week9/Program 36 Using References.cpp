@@ -45,10 +45,10 @@ void Program36()
 	plus25(rNum);
 
 	// 4. Output num.
-	cout << "Number: " << number << endl;
+	cout << "Number: " << number << endl << endl;
 
 	// 5. Ask the user to input another number and store this in num.
-	cout << "Input another number!";
+	cout << "Input another number!" << endl;
 	cin >> input;
 	number = stoi(input);
 
@@ -60,7 +60,7 @@ void Program36()
 	minus25(rNum);
 
 	// 8. Output num.
-	cout << "Number: " << number << endl;
+	cout << "Number: " << number << endl << endl;
 
 
 	// *Insert incoherent screaming*

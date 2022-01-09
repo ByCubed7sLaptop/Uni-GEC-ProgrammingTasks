@@ -37,3 +37,5 @@ void Program21()
 	cout << "Smallest number = " << smallestNumber;
 
 }
+
+//int main() { Program21(); };

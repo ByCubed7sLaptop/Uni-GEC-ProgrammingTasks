@@ -1,9 +1,4 @@
 #include <iostream>
-#include <string>
-#include <vector>
-#include <sstream>
-#include <iterator>
-#include <algorithm>
 
 using namespace std;
 
@@ -31,40 +26,21 @@ using namespace std;
 			You can read up on this function here: http://cplusplus.com/reference/istream/istream/getline/
 */
 
-// Split a string into a vector of strings by a delimiter
-vector<string> split(const string& s, char delimiter)
-{
-	vector<string> strings;
-
-	stringstream test(s);
-	string slice;
-
-	while (getline(test, slice, delimiter))
-		strings.push_back(slice);
-	
-	return strings;
-}
-
 void Program25()
 {
-	string nameIn;
-	vector<string> names;
+	// Store it in a char array
+	char* initial1 = new char();
+	char* initial2 = new char();
+	char* surname  = new char();
 	
-	while(names.size() < 3){
-		cout << "Enter your first name initial, your middle name initial and your entire surname." << endl;
-		getline(cin, nameIn);
+	cout << "Enter your first name initial, your middle name initial and your entire surname." << endl;
+	cin >> initial1 >> initial2 >> surname;
 
-		names = split(nameIn, *" ");
-	}
-
-	for (const auto& name : names) cout << name << endl;
 	cout << endl;
 
-
-	cout << "First initial: " << names[0][0] << endl;
-	cout << "Middle initial: " << names[1][0] << endl;
-	cout << endl;
-	cout << "Surname initial: " << names[2] << endl;	
+	cout << "First initial: " << initial1 << endl;
+	cout << "Middle initial: " << initial2 << endl;
+	cout << "Surname: " << surname << endl;
 }
 
 //int main() { Program25(); }
